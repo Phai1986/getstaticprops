@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cates",
+  "info": {
+    "singularName": "cate",
+    "pluralName": "cates",
+    "displayName": "cate",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "pokemon": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::pokeid.pokeid",
+      "inversedBy": "cates"
+    }
+  }
+}

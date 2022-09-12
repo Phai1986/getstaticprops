@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pokeapi",
+  "info": {
+    "singularName": "pokeid",
+    "pluralName": "pokeapi",
+    "displayName": "pokemon",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "japanese_name": {
+      "type": "string"
+    },
+    "Official_name": {
+      "type": "string"
+    },
+    "img_profile": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Physiology": {
+      "type": "richtext"
+    },
+    "cates": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::cate.cate",
+      "mappedBy": "pokemon"
+    }
+  }
+}
